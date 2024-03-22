@@ -13,7 +13,6 @@ namespace Ispit.Konzola
                 .Where(klijent => klijent.jeMilijunas());
 
             var GrupirajPremaBanci = sviMilijunasi
-                .Where(klijent => klijent.jeMilijunas())
                 .GroupBy(klijent => klijent.Banka)
                 .Select(group => new GrupiraniMilijunasi {
                     Banka = group.Key,
